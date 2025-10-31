@@ -10,7 +10,7 @@ function App() {
       price: "15.99",
       description:
         "I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed",
-      addressImage: `./img/items-1.jpeg`,
+      addressImage: `./src/img/item-1.jpeg`,
       type: "Breakfast",
     },
     {
@@ -19,7 +19,7 @@ function App() {
       price: "13.99",
       description:
         "vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats",
-      addressImage: `./img/items-2.jpeg`,
+      addressImage: `./src/img/item-2.jpeg`,
       type: "Lunch",
     },
     {
@@ -28,7 +28,7 @@ function App() {
       price: "15.99",
       description:
         "ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.",
-      addressImage: `./img/items-3.jpeg`,
+      addressImage: `./src/img/item-3.jpeg`,
       type: "Shakes",
     },
     {
@@ -37,7 +37,7 @@ function App() {
       price: "15.99",
       description:
         "Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut,",
-      addressImage: `./img/items-4.jpeg`,
+      addressImage: `./src/img/item-4.jpeg`,
       type: "Breakfast",
     },
     {
@@ -46,7 +46,7 @@ function App() {
       price: "15.99",
       description:
         "franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up",
-      addressImage: `./img/items-5.jpeg`,
+      addressImage: `./src/img/item-5.jpeg`,
       type: "Lunch",
     },
     {
@@ -55,7 +55,7 @@ function App() {
       price: "15.99",
       description:
         "Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday",
-      addressImage: `./img/items-6.jpeg`,
+      addressImage: `./src/img/item-6.jpeg`,
       type: "Shakes",
     },
     {
@@ -64,7 +64,7 @@ function App() {
       price: "15.99",
       description:
         "carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird",
-      addressImage: `./img/items-7.jpeg`,
+      addressImage: `./src/img/item-7.jpeg`,
       type: "Breakfast",
     },
     {
@@ -73,7 +73,7 @@ function App() {
       price: "15.99",
       description:
         "on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut",
-      addressImage: `./img/items-8.jpeg`,
+      addressImage: `./src/img/item-8.jpeg`,
       type: "Lunch",
     },
     {
@@ -82,7 +82,7 @@ function App() {
       price: "15.99",
       description:
         "skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.",
-      addressImage: `./img/items-9.jpeg`,
+      addressImage: `./src/img/item-9.jpeg`,
       type: "Shakes",
     },
     {
@@ -91,7 +91,7 @@ function App() {
       price: "15.99",
       description:
         "skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.",
-      addressImage: `./img/items-10.jpeg`,
+      addressImage: `./src/img/item-10.jpeg`,
       type: "Dinner",
     },
   ];
@@ -168,11 +168,14 @@ function App() {
         <ul className="grid grid-cols-2 pt-10 gap-x-8 gap-y-12">
           {items.map((item) => (
             <li className="" key={item.id}>
-              <div className="flex gap-5 max-w-[450px]">
-                <div className="border-4 border-[#c59d5f] rounded-lg">
-                  <img src={item.addressImage} />
+              <div className="flex gap-5 ">
+                <div className="">
+                  <img
+                    className="w-full max-h-[175px] border-4 border-[#c59d5f] rounded-lg object-cover"
+                    src={item.addressImage}
+                  />
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col max-w-[450px]">
                   <div className="flex justify-between pb-1">
                     <div className="tracking-[4px] capitalize font-bold">
                       {item.title}
